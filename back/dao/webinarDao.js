@@ -1,6 +1,6 @@
 const db = require("../dataBase/db");
 const moment = require("moment");
-const { removeUndefinedKeys } = require("../utils/removeUndefinedKeys");
+const { removeUndefinedKeys } = require("../middlewares/removeUndefinedKeys");
 const webinarDao= {};
 
 webinarDao.addWebinarData = async (webinarData) => {
@@ -11,7 +11,7 @@ webinarDao.addWebinarData = async (webinarData) => {
       registration_date: moment().format("YYYY-MM-DD"),
       email:webinarData.email,
       name:webinarData.name,
-      surname:webinarData.surname,
+      lastName:webinarData.surname,
       age:webinarData.age,
       mainStruggle:webinarData.mainStruggle
     

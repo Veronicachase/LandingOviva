@@ -69,7 +69,7 @@ const LandingForm = () => {
       {day} {month} {year} 12 PM - 1 PM CET
     </h4>
     <h1>Boost Your Mood & Get Back Your Energy</h1>
-    <form onSubmit={handleSubmitButton} className="form">
+    <form onSubmit={handleSubmitButton} className="form ">
       {/* Primera fila: Name y Last Name */}
       <div className="row mb-3">
         <div className="col-md-6">

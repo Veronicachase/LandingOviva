@@ -2,14 +2,19 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import headerImage from '../../assets/images/LandingHero1.png';
 import Logo from '../../assets/images/logotype_fullcolor_rgb 1.png';
-import orangeTop from '../../assets/images/Color=Orange-80-Position=top-Device=Desktop.png';
+import orangeTopLarge from '../../assets/images/top-orange-large.png';
+import orangeTopSmall from '../../assets/images/Top-orange-small.png';
+import orangeBottomLarge from '../../assets/images/bottom-orange-large.png';
+import orangeBottomSmall from '../../assets/images/bottom-orange-small.png';
 import iconPoint from '../../assets/images/Color=Orange-Number=No-Size=96-Device=Desktop.png';
 import iconPoint1 from '../../assets/images/Color=Default-Number=Yes-Size=80-Device=Mobile.png';
 import scarfWomanImg from '../../assets/images/scarfWoman.png';
-import timeLine1 from '../../assets/images/Type=Line-group-Group=1-Device=Desktop.png';
-import timeLine2 from '../../assets/images/Type=Line-group-Group=4-Device=Desktop.png';
+import timeline1 from '../../assets/images/Type=Line-group-Group=1-Device=Desktop.png';
+import timeline2 from '../../assets/images/Type=Line-group, Group=2, Device=Desktop.png';
 import timeline3 from '../../assets/images/Type=Line-group-Group=3-Device=Desktop.png';
-import orangeBottom from '../../assets/images/Color=Orange-80-Position=Bottom-Device=Desktop.png';
+import timeline4 from '../../assets/images/Type=Line-group-Group=4-Device=Desktop.png';
+import timeline2Small from '../../assets/images/timeline2-mobile.png';
+import timeline3Small from  '../../assets/images/timeline3-mobile.png';
 import LandingSlice12 from '../../assets/images/LandingSlice1.2.png';
 import LandingSlice2 from '../../assets/images/landingSlice2.jpg';
 import LandingSlice3 from '../../assets/images/landingSlice3.png';
@@ -24,6 +29,7 @@ import Slider from 'react-slick';
 import '@fontsource/montserrat';
 import '@fontsource/fahkwang';
 import './landingPage.css';
+
 
 function LandingPage() {
   const [timeLeft, setTimeleft] = useState({
@@ -58,10 +64,10 @@ function LandingPage() {
 
   return (
     <div className="container-fluid main ">
-      <div className="wrapper">
+      <div className="wrapper position-relative">
         <img className="hero" src={headerImage} alt="Hero" />
         <img className="logo" src={Logo} alt="Logo" />
-        <div />
+      
         <div className="modal-container">
           <h4>
             YOU FEEL TIRED, HUNGRY, FUGGY, ANXIOUS, AND YOU CRAVE FOR SUGAR ALL
@@ -76,27 +82,37 @@ function LandingPage() {
           </Link>
         </div>
       </div>
+      <div />
       {/********************************************second block ****************************************** */}
       <div className="wrapper secondary  mb-5">
-        <img className="orangeTop" src={orangeTop} alt="Orange Top" />
-        <div className="webinarInfo ">
-          <h1 className="secondaryh1">Webinar starts in</h1>
-          <div className="d-flex mb-5 mt-5">
-            <div className="d-flex flex-column">
-              <div className="round">
+
+      <picture className="orangeTopContainer">
+        <source media="(min-width: 768px)" srcSet={orangeTopLarge} />
+        <source media="(max-width: 767px)" srcSet={orangeTopSmall} />
+        <img src={orangeTopLarge} alt="Descripción de la imagen" className="orangeTop" />
+     </picture>
+      
+          <div className="webinarInfo">
+          <h1 className="orangeTitle">Webinar starts in</h1>
+          <div className="d-flex mb-5 mt-5 round-container">
+
+
+            <div className="d-flex flex-column ">
+              <div className="round ">
                 <h1>{timeLeft.days} </h1>
               </div>
               <div>
-                <h4> DAYS </h4>
+                <h5> DAYS </h5>
               </div>
             </div>
+
 
             <div className="d-flex flex-column">
               <div className="round">
                 <h1>{timeLeft.hours} </h1>
               </div>
               <div>
-                <h4> HOURS </h4>
+                <h5> HOURS </h5>
               </div>
             </div>
 
@@ -105,9 +121,10 @@ function LandingPage() {
                 <h1>{timeLeft.minutes} </h1>
               </div>
               <div>
-                <h4> MINUTES </h4>
+                <h5> MINUTES </h5>
               </div>
             </div>
+
           </div>
 
           <Link to="/landing-form">
@@ -116,11 +133,17 @@ function LandingPage() {
         </div>
       </div>
 {/************************************************* feeling******************************************** */}
-      <div className="d-flex justify-content-around  wrapper mb-5 divColumn">
-        <div className="flex-fill d-flex  flex-column">
-          <h1 className="secondaryh1  ch">Are you feeling:</h1>
-          <div className="bullet-container">
-            <div className="bullet-point">
+      <div className="d-flex  wrapper mb-5 divColumn">
+        
+      <div >
+
+          <h1 className="secondaryTitle  ch">Are you feeling:</h1>
+
+          <div className="section-secondary-container row gx-5">
+          
+          <div className="bullet-container col-12 col-md-6" >
+           
+          <div className="bullet-point">
               <img src={iconPoint} alt="Exhausted" />
               <p className="bulletPoints">
                 <span>EXHAUSTED</span> No matter how much you sleep?
@@ -144,6 +167,7 @@ function LandingPage() {
                 <span>ANXIOUS</span> And on edge?
               </p>
             </div>
+            
             <div className="bullet-point">
               <img src={iconPoint} alt="Craving Sugar" />
               <p className="bulletPoints">
@@ -151,24 +175,30 @@ function LandingPage() {
               </p>
             </div>
           </div>
-        </div>
-        <div className=" overflow-hidden mr-0 image">
+        
+
+        <div className=" overflow-hidden mr-0 col-12 col-md-6 image-container">
           <img src={scarfWomanImg} alt="Scarf Woman" />
         </div>
+
+        </div>
+      </div>
       </div>
 {/*************************************************dive into******************************************** */}
      
 <div className="diveInto mb-5 mt-5 wrapper">
  
-    <div className="col-12">
-      <img className="timeline mb-5" src={timeLine1} alt="Timeline" />
-    </div>
+    <picture className="TimeLinePIcture"  >
+    <source media="(min-width: 768px)" srcSet={timeline1}/>
+    <source media="(max-width: 767px)" srcSet={timeline3Small}/>
+    <img src={timeline1} alt="time Line Division" className="timeLine" />
+    </picture>
 
-   
-    <div className="d-flex">
-      <h2 className="ms-3">What we´ll dive into: </h2>
+      
+        <div className="d-flex">
+          <h2 className="ms-3 secondaryTitle">What we´ll dive into: </h2>
     </div>
-      <div className="row m-3">
+      <div className="row m-3 ">
         <div className="col-12 col-md-6 ">
           <img src={iconPoint1} alt="Icon 1" />
           <span>UNDERSTANDING THE SYMPTOMS:</span>
@@ -231,17 +261,23 @@ function LandingPage() {
 
         {/**+******************************************Agniezka******************************************+ */}
         <div className="mb-5 wrapper">
-        <img className="timeline  mb-5" src={timeline3} />
+    
+        <picture className="TimeLinePIcture"  >
+        <source media="(min-width: 768px)" srcSet={timeline2}/>
+        <source media="(max-width: 767px)" srcSet={timeline2Small}/>
+        <img src={timeline2} alt="time Line Division" className="timeLine" />
+        </picture>
 
-        <div className="row  separacion">
-          <div className="col-md-5">
+        <div className="section-secondary-container row gx-5 ">
+          
+         <div className="agnieszkaImage col-12 col-md-6 order-2 order-md-1">
             <img src={Agniezka} />
           </div>
 
-          <div className="col-md-5 ">
+          <div className="col-12 col-md-6 order-1 order-md-2 ">
             <p className="secondaryTitle">Meet our speaker</p>
             <p className="secondaryText">AGNIESZKA FRONIA</p>
-            <p className="longText">
+            <p className="longText ">
               Hi, I am Agnieszka and I am a certified women’s health expert with
               a passion for helping others.
             </p>
@@ -278,14 +314,16 @@ function LandingPage() {
         </div>
 {/**+******************************************carrousel******************************************+ */}
         <div className="wrapper Secondary">
-          <div  className=" mb-5">
-            <img className="timeline" src={timeLine2} />
-          </div>
+        <picture className="TimeLinePIcture"  >
+        <source media="(min-width: 768px)" srcSet={timeline3}/>
+        <source media="(max-width: 767px)" srcSet={timeline3Small}/>
+        <img src={timeline3} alt="time Line Division" className="timeLine" />
+        </picture>
 
           <div className="row">
-            <div className="col-5 offset-ms-1  carrouselText">
-              <h2>What is Oviva Care?</h2>
-              <p>
+            <div className=" col-5 gx-5 carrouselText">
+              <h2 className="secondaryTitle">What is Oviva Care?</h2>
+              <p className="text">
                 Our mission is to create a future where every woman has the
                 Knowledge, Resources, and Support to live her best life.
                 Pellentesque non tincidunt eget molestie libero. Aenean ut quis
@@ -312,17 +350,21 @@ function LandingPage() {
             </div>
 {/**+******************************************comments******************************************+ */}
             <div className='wrapper'>
-              <div>
-                <img src={timeline3} />
-              </div>
+            <picture className="TimeLinePIcture"  >
+            <source media="(min-width: 768px)" srcSet={timeline4}/>
+            <source media="(max-width: 767px)" srcSet={timeline2Small}/>
+            <img src={timeline4} alt="time Line Division" className="timeLine" />
+            </picture>
 
-              <div className="sayingDiv">
+
+              <div className="sayingDiv ">
                 <h2 className="secondaryTitle saying">
-                  What people are saying
+                  What people <br/> are saying
                 </h2>
               </div>
 
               <div className="d-flex gap-5 comments">
+
                 <div className="commentDiv">
                   <div className="roundedimageContainer">
                     <img
@@ -371,14 +413,20 @@ function LandingPage() {
         
 {/****************************************bottom section*************************************** */}
             <div className="bottomSection wrapper">
-            <img src={orangeBottom} alt="background" className="orangeBottomImage" />
+
+            <picture className="orangeButtomContainer"  >
+            <source media="(min-width: 768px)" srcSet={orangeBottomLarge}/>
+            <source media="(max-width: 767px)" srcSet={orangeBottomSmall}/>
+            <img src={orangeBottomLarge} alt="Orange background" className="bottomOrange" />
+            </picture>
+
 
             <div className="bottomWrapper">
               <div className="bottom-Image-container">
                 <img
                   className="bottom-Image"
                   src={ImageFooterSin}
-                  alt="bootom image"
+                  alt="bottom image"
                 />
               </div>
 

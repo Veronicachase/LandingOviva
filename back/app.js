@@ -1,9 +1,9 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const logger = require("morgan");
 
-
-const webinarEmail = require("./router/webinarEmailRouter");
+const webinarEmail = require("./router/webinarRouter");
 
 
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });

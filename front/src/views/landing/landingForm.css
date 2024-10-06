@@ -12,6 +12,22 @@
 
   }
 
+.main, .hero{
+  width:100vw;
+  margin:0;
+  --bs-gutter-x:0;
+
+}
+
+.form{
+  width:100%;
+  max-width:700px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:space-around;
+}
+
 .form input, 
 .form select {
     border-radius: 32px;
