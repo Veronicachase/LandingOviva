@@ -27,7 +27,9 @@ const addWebinarData = async (req, res) => {
   }
 };
 
- const getWebinarData = async (req, res) => {
+
+ 
+ const getWebinarDate = async (req, res) => {
    
   try {
     
@@ -42,6 +44,6 @@ const addWebinarData = async (req, res) => {
   }
 
  } 
+
  
- 
- module.exports = { addWebinarData,getWebinarData };
+ module.exports = { addWebinarData,getWebinarData, getWebinarDate };
