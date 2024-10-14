@@ -61,10 +61,11 @@ const LandingForm = () => {
   const year = activityDate.year || "";
 
   return (
-  <div className="container-fluid main">
-  <img className="hero img-fluid" src={headerImage} alt="Hero" />
+  <div className="container-fluid main relative h-dvh ">
+  <img className="hero img-fluid h-dvh " src={headerImage} alt="Hero" />
   <img className="logo img-fluid" src={Logo} alt="Logo" />
-  <div className="modal-container d-flex flex-column">
+  
+  <div className="modal-container d-flex flex-column F-Family absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2 py-5 px-8 rounded-[32px]">
     <h4>
       {day} {month} {year} 12 PM - 1 PM CET
     </h4>
