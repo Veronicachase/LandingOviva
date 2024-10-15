@@ -79,11 +79,11 @@ function LandingPage() {
 
   return (
     <div className=" w-dvw overflow-hidden">
-      <div className="relative flex justify-center md:justify-start min-h-[812px]">
+      <div className="relative flex justify-center  md:justify-start min-h-[812px]">
         <img className="hero" src={headerImage} alt="Hero" />
         <img className="logo" src={Logo} alt="Logo" />
 
-        <div className="modal-container  absolute px-[7%] py-[10%]  md:py-[5%] gap-4 md:gap-y-8  max-w-2xl m-4 align-middle  rounded-[32px] top-[12%] bottom-[12%]flex flex-wrap overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-white/40 to-white/30  ">
+        <div className="modal-container absolute px-[7%] py-[10%]  md:py-[5%] gap- md:gap-y-8  max-w-2xl m-4 align-middle  rounded-[32px] top-[12%] bottom-[12%]flex flex-wrap overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-white/40 to-white/30  ">
           <p className=" F-Family text-base md:text-lg font-black text-center tracking-widest px-8">
             YOU FEEL TIRED, HUNGRY, FOGGY, ANXIOUS, AND YOU CRAVE FOR SUGAR ALL
             THE TIME?
