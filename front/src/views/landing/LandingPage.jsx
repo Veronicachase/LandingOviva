@@ -91,7 +91,7 @@ function LandingPage() {
           <p className="text-base md:text-lg md:mt-8 text-center tracking-widest F-Family ">
             JOIN LIVE <br /> WOMEN´S HORMONAL HEALTH WEBINAR
           </p>
-          <h5 className="text-3xl md:text-4xl font-bold text-center tracking-wider  ">
+          <h5 className="text-3xl md:text-4xl font-bold text-center tracking-wider F-Family2">
             Boost Your Mood & Get Back Your Energy
           </h5>
           <p className="text-base md:text-lg font-semibold text-center tracking-wider mt-4 px-8 F-Family ">

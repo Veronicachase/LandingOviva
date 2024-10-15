@@ -5,14 +5,16 @@ const apiUrl = import.meta.env.VITE_API_URL;
 const addWebinarData = async (data) => {
   try {
    
-    const response = await axios.post(`${apiUrl}/web-email`, data, {
-     
+    const response = await axios.post(`${apiUrl}/webinar`, data, {
+     headers: {
+        'Content-Type': 'application/json', 
+      }
     });
 
-    console.log('email data:', response.data);
+    console.log('This is my data:', response.data);
     return response.data;
   } catch (error) {
-    console.error('Error adding email:', error);
+    console.error('Error adding data:', error);
     throw error;
   }
 };

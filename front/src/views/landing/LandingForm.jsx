@@ -25,8 +25,13 @@ const LandingForm = () => {
   useEffect(() => {
     const fetchActivityDate = async () => {
       try {
-        const date = await getActivityDate();
-        setActivityDate(date);
+        const dateData = await getActivityDate();
+        const parseDate = new Date(dateData.activityDate)
+        const day = parseDate.getDay()
+        const month = parseDate.getMonth()+1
+        const year = parseDate.getFullYear()
+
+        setActivityDate({ day, month, year });
       } catch (error) {
         console.error("Error fetching activity date:", error);
       }
@@ -40,7 +45,7 @@ const LandingForm = () => {
     try {
       const successful = await addWebinarData(formData);
       if (successful) {
-        navigate("/successfull-registry");
+        navigate("/successful-registry");
       }
     } catch (error) {
       console.error("Error adding webinar data:", error);
@@ -55,26 +60,44 @@ const LandingForm = () => {
       [name]: value,
     }));
   };
+  const getOrdinalSuffix = (day) => {
+    if (day > 3 && day < 21) return 'TH'; 
+    switch (day % 10) {
+      case 1: return 'ST';
+      case 2: return 'ND';
+      case 3: return 'RD';
+      default: return 'TH';
+    }
+  };
+  const getMonthName = (month) => {
+    const monthNames = [
+      "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", 
+      "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+    ];
+    return monthNames[month - 1]; 
+  };
 
-  const day = activityDate.day || "";
-  const month = activityDate.month || "";
+  const day = activityDate.day ? `${activityDate.day}${getOrdinalSuffix(activityDate.day)}` : "";
+  const month = activityDate.month ? getMonthName(activityDate.month) : "";
   const year = activityDate.year || "";
+  
 
   return (
-  <div className="container-fluid main relative h-dvh ">
-  <img className="hero img-fluid h-dvh " src={headerImage} alt="Hero" />
+  <div className="container-fluid main2 relative h-screen ">
+  <img className="hero2 w-vw  h-vh" src={headerImage} alt="Hero" />
   <img className="logo img-fluid" src={Logo} alt="Logo" />
   
-  <div className="modal-container d-flex flex-column F-Family absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2 py-5 px-8 rounded-[32px]">
-    <h4>
+  <div className=" absolute  px-[7%] py-[10%]  md:py-[5%]  max-w-2xl mx-4 my-4  lg:m-4 align-middle  rounded-[32px] top-[12%] bottom-[12%]flex flex-wrap overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-white/40 to-white/30">
+    <h4 className=" mb-3 lg:mb-5">
+    
       {day} {month} {year} 12 PM - 1 PM CET
     </h4>
-    <h1>Boost Your Mood & Get Back Your Energy</h1>
+    
     <form onSubmit={handleSubmitButton} className="form ">
       {/* Primera fila: Name y Last Name */}
-      <div className="row mb-3">
-        <div className="col-md-6">
-          <label htmlFor="name">Name</label>
+      <div className="row">
+        <div className="col-md-6 mb-2 lg:mb-3">
+          <label className=" text-[13px] lg:text-base" htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
@@ -82,13 +105,13 @@ const LandingForm = () => {
             placeholder="Name"
             value={formData.name}
             onChange={handleInputChange}
-            className="form-control"
+            className="text-[14px] lg:text-base form-control"
             required
           />
         </div>
 
-        <div className="col-md-6">
-          <label htmlFor="lastName">Last Name</label>
+        <div className="col-md-6 mb-2 lg:mb-3">
+          <label  className=" text-[13px] lg:text-base" htmlFor="lastName">Last Name</label>
           <input
             type="text"
             name="lastName"
@@ -96,16 +119,16 @@ const LandingForm = () => {
             placeholder="Last Name"
             value={formData.lastName}
             onChange={handleInputChange}
-            className="form-control"
+            className=" text-[14px] lg:text-base form-control"
             required
           />
         </div>
       </div>
 
       {/* Segunda fila: Email ocupa toda la fila */}
-      <div className="row mb-3 ">
-        <div className="col-12 full-width-email">
-          <label htmlFor="email">Email</label>
+      <div className="row">
+        <div className="col-12 full-width-email mb-2 lg:mb-3">
+          <label className=" text-[13px] lg:text-base" htmlFor="email">Email</label>
           <input
             type="email"
             name="email"
@@ -113,22 +136,22 @@ const LandingForm = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleInputChange}
-            className="form-control "
+            className=" text-[14px] lg:text-base form-control "
             required
           />
         </div>
       </div>
 
       {/* Tercera fila: Age y Main Struggle */}
-      <div className="row mb-3">
-        <div className="col-md-6">
-          <label htmlFor="age">Age</label>
+      <div className="row ">
+        <div className="col-md-6 mb-2 lg:mb-3">
+          <label className=" text-[13px] lg:text-base" htmlFor="age">Age</label>
           <select
             name="age"
             id="age"
             value={formData.age}
             onChange={handleInputChange}
-            className="form-select"
+            className=" text-[14px] lg:text-base form-select"
             required
           >
             <option value="" disabled>
@@ -143,14 +166,14 @@ const LandingForm = () => {
           </select>
         </div>
 
-        <div className="col-md-6">
-          <label htmlFor="mainStruggle">Main Struggle</label>
+        <div className="col-md-6 mb-2 lg:mb-3">
+          <label className=" text-[13px] lg:text-base" htmlFor="mainStruggle">Main Struggle</label>
           <select
             name="mainStruggle"
             id="mainStruggle"
             value={formData.mainStruggle}
             onChange={handleInputChange}
-            className="form-select"
+            className="text-[14px] lg:text-base form-select"
             required
           >
             <option value="" disabled>
@@ -166,9 +189,9 @@ const LandingForm = () => {
           </select>
         </div>
       </div>
-
+      <h5 className="text-3xl md:text-4xl font-bold text-center tracking-wider mb-2 mt-2 lg:order-first">Boost Your Mood & Get Back Your Energy</h5>
       {/* Botón de enviar */}
-      <button type="submit" className="mainButton">
+      <button type="submit" className="mainButton mt-4 lg:mt-5 self-center">
         SAVE YOUR SPOT
       </button>
     </form>

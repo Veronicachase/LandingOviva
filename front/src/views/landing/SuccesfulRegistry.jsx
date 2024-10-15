@@ -8,21 +8,24 @@ import './successfulRegistry.css'
 const SuccessfulRegistry = () => {
   
     return (
-      <div className="container-fluid"> 
-      <img className="hero" src={headerImage} alt="Hero" />
-      <img className="logo" src={Logo} alt="Logo" />
-      <div />
-      <div className="modal-container">
-       
-      <h1>Thank you <br/> for your registration</h1>
+      <div className="container-fluid main relative ">
+      <img className="hero img-fluid min-h-screen h-screen" src={headerImage} alt="Hero" />
+      <img className="logo img-fluid" src={Logo} alt="Logo" />
+      <div className="modal-container  absolute gap-5  px-[7%] p-[7%]  max-w-2xl mx-4 my-4  lg:m4 align-middle  rounded-[32px] top-[12%] bottom-[12%]flex flex-wrap overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-white/40 to-white/30"> 
+    
+      <h1 className='text-center text-3xl lg:text-4xl tracking-wide font-bold F-Family2'>Thank you <br/> for your registration</h1>
 
-        <p>An email has been sent to your email box, 
+        <p className='text-center text-lg lg:text-xl tracking-wide F-Family'>An email has been sent to your email box, 
         please check your spam folder</p>
 
-        <h4>LEARN MORE ABOUT OVIVA CARE </h4>
+        <h4 className='text-center text-lg lg:text-xl tracking-widest font-semibold F-Family '>LEARN MORE ABOUT OVIVA CARE </h4>
 
       </div>
       </div>
+     
+
+      
+
     )
   }
   

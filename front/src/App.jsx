@@ -15,7 +15,7 @@ function App() {
       <Routes> 
         <Route index element={<LandingPage />} />
         <Route path="/landing-form" element={<LandingForm />} /> 
-        <Route path="/successful-Registry" element={<SuccessfulRegistry/>} /> 
+        <Route path="/successful-registry" element={<SuccessfulRegistry/>} /> 
       </Routes>
     </BrowserRouter>
   );

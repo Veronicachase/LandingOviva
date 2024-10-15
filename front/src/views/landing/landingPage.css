@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   height: 100vw;
   margin: 0;
@@ -9,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 .logo {
@@ -29,9 +31,11 @@ body {
   
 } 
 
-.modal-container h5{
+.F-Family2{
   font-family: 'Fahkwang', serif;
-} 
+
+}
+
 
 .hero {
   height: auto;
@@ -119,10 +123,7 @@ body {
 
 /* **********************tercera sección are you feeling************************** */
 
-.font{
-  font-family: 'Montserrat', sans-serif;
-  
-}
+
 
 .image-container img {
   width: 100%;
@@ -164,14 +165,7 @@ body {
   height: 100%;
 }
 
-.text {
-  font-family: 'Montserrat', sans-serif;
-  
-}
-.carrouselText h3 {
-  font-family: 'Montserrat', sans-serif;
 
-}
 
 /* **********************sexta sección comments************************** */
 
@@ -230,14 +224,14 @@ body {
 }
 
 .bottom-details h3 {
-  font-family: 'Montserrat', sans-serif;
+
   line-height: 2;
   font-weight: 700;
 
 }
 
 .bottom-details p {
-  font-family: 'Montserrat', sans-serif;
+ 
   line-height: 1.5;
   font-weight: 400;
   

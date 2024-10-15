@@ -30,20 +30,20 @@ webinarDao.addWebinarData = async (webinarData) => {
 
 
 
-webinarDao.getWebinarData = async (activityDate) => {
+webinarDao.getWebinarDate = async (activityDate) => {
   let conn = null;
   try {
     conn = await db.createConnection();
 
     let result = await db.query(
-      "SELECT * FROM webinardate WHERE activityDate = ?",
+      "SELECT activityDate FROM webinardate ORDER BY activityDate DESC LIMIT 1",
       [activityDate],  
       "select",
       conn
     );
-
+    return result[0]
    
-    return result;
+  
 
   } catch (e) {
     console.error(e.message);

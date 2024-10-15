@@ -2,11 +2,11 @@ import axios from 'axios';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
-const getWebinarData = async () => {
+const getWebinarDate = async () => {
     try {
       const response = await axios.get(`${apiUrl}/webinar/webinar-date`);
   
-      console.log('webinar data:', response.data);
+      console.log('Webinar data:', response.data.activityDate);
       return response.data;
     } catch (error) {
       console.error('Error fetching webinar data:', error);
@@ -15,4 +15,4 @@ const getWebinarData = async () => {
   };
   
 
-export default getWebinarData
+export default getWebinarDate
