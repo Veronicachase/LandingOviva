@@ -342,16 +342,16 @@ function LandingPage() {
           </picture>
 
           <div className="flex flex-col justify-between lg:flex-row mx-4 mb-4 gap-5">
-            <div className="agnieszkaImage lg:w-1/2">
+            <div className="agnieszkaImage lg:w-1/2 order-[2] lg:order-[1] lg:ml-[-24px]">
               <img
                 src={Agniezka}
                 alt="Agnieszka"
-                className="max-h-[500px] lg:max-h-[700px] w-full object-cover rounded-[32px]"
+                className="max-h-[500px] lg:min-h-[100%] w-full object-cover rounded-[32px] lg:rounded-s-none"
                 style={{ objectPosition: '0% 40%' }}
               />
             </div>
 
-            <div className="lg:w-1/2 xl:px-[3%]">
+            <div className="lg:w-1/2 xl:px-[3%] order-1 lg:order-2">
               <p className="secondaryTitle mb-4  ml-0 F-Family text-[47px] xl:text-[56px]">
                 Meet our speaker
               </p>
@@ -463,7 +463,7 @@ function LandingPage() {
 
             <div className="film-strip-container overflow-hidden relative pt-5">
               <div className="comments flex flex-wrap gap-4 justify-center mt-5 mb-[200px]">
-                <div className="film-strip flex animate-scroll">
+                <div className="film-strip flex flex-col sm:flex-row animate-scroll gap-12 sm:gap-4">
                   <div className="comment  relative p-4 mb-5">
                     <div className="flex justify-center mb-4">
                       <img
@@ -615,10 +615,10 @@ function LandingPage() {
               />
             </picture>
 
-            <div className="absolute inset-y-72 lg:inset-y-40  md:inset-0  flex flex-col  md:flex-row">
-              <div className="relative  flex-shrink-0 md:w-1/2 flex items-end justify-center ">
+            <div className="absolute w-full inset-y-72 lg:inset-y-40  md:inset-0  flex flex-col  md:flex-row">
+              <div className="relative flex-shrink-0 md:w-1/2 flex items-center md:items-end justify-center">
                 <img
-                  className="absolute left-[56px] bottom-[0px] lg:left-[0px] lg:bottom-[-160px] object-cover min-w-[342px] "
+                  className="bottom-img absolute bottom-[0px] lg:left-[30px] lg:bottom-[-160px] object-cover min-w-[342px] scale-x-[-1]  "
                   src={ImageFooterSin}
                   alt="bottom image"
                 />
@@ -629,7 +629,7 @@ function LandingPage() {
                 <p className="F-Family text-lg xl:text-xl">
                   WEBINAR DAY 10TH SEPTEMBER 2024
                 </p>
-                <h2 className="F-Family-2 text-3xl xl:text-[41px] line">
+                <h2 className="F-Family-2 text-2xl lg:text-3xl xl:text-[41px] line">
                   Boost Your Mood & Get Back Your Energy
                 </h2>
                 <Link to="/landing-form">

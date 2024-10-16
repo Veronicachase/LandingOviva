@@ -292,11 +292,16 @@ body {
   }
 
   /* bottom*/
-
   .bottom-details h3,
   .bottom-details p,
   .bottom-details h2 {
     line-height: 2rem;
+  }
+  
+  .bottom-img {
+    max-height: 460px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(-1) !important;
   }
 }
 /* foorter*/
@@ -304,5 +309,12 @@ body {
 @media (min-width: 768px) {
   .orangeTop {
     height: 620px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* comments*/
+  .film-strip {
+    animation: none;
   }
 }
