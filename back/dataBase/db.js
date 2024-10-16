@@ -1,5 +1,5 @@
 const mysql = require("mysql2/promise");
-require('dotenv').config();
+require("dotenv").config();
 let db = {};
 
 const pool = mysql.createPool({
@@ -14,20 +14,16 @@ const pool = mysql.createPool({
   dateStrings: true,
 });
 
-
 db.createConnection = async () => {
   try {
-    
-    const connection = await pool.getConnection(); 
-    
-
+    const connection = await pool.getConnection();
+    console.log("Database connection successful");
     return connection;
   } catch (error) {
-    throw new Error(error.message);
+    console.error("Error establishing database connection:", error.message);
+    throw new Error("Failed to connect to the database");
   }
-  
 };
-
 
 db.query = async (sqlQuery, params, type, conn) => {
   try {
