@@ -158,7 +158,7 @@ function LandingPage() {
               className="w-12 md:w-20 lg:w-24"
               alt="Exhausted"
             />
-            <p className="mt-[-30px] ml-[20px] md:mt-[-50px] ml-[50px] lg:mt-[-60px] ml-[100px] F-Family ">
+            <p className="mt-[-30px] md:mt-[-50px] ml-[50px] lg:mt-[-60px] F-Family ">
               <strong>EXHAUSTED</strong> No matter how much you sleep?
             </p>
           </div>
@@ -169,7 +169,7 @@ function LandingPage() {
               className="w-12 md:w-20 lg:w-24"
               alt="Foggy-headed"
             />
-            <p className="mt-[-30px] ml-[20px] md:mt-[-50px] ml-[50px] lg:mt-[-60px] ml-[100px]  F-Family">
+            <p className="mt-[-30px]  md:mt-[-50px] ml-[50px] lg:mt-[-60px] F-Family">
               <strong>FOGGY-HEADED</strong> and unable to focus?
             </p>
           </div>
@@ -179,7 +179,7 @@ function LandingPage() {
               className="w-12 md:w-20 lg:w-24"
               alt="Hungry"
             />
-            <p className="mt-[-30px] ml-[20px] md:mt-[-50px] ml-[50px] lg:mt-[-60px] ml-[100px] F-Family">
+            <p className="mt-[-30px] md:mt-[-50px] ml-[50px] lg:mt-[-60px]  F-Family">
               <strong>HUNGRY</strong> Shortly after eating?
             </p>
           </div>
@@ -189,7 +189,7 @@ function LandingPage() {
               className="w-12 md:w-20 lg:w-24"
               alt="Anxious"
             />
-            <p className="mt-[-30px] ml-[20px] md:mt-[-50px] ml-[50px] lg:mt-[-60px] ml-[100px] F-Family">
+            <p className="mt-[-30px] md:mt-[-50px] ml-[50px] lg:mt-[-60px] F-Family">
               <strong>ANXIOUS</strong> And on edge?
             </p>
           </div>
@@ -200,7 +200,7 @@ function LandingPage() {
               className="w-12 md:w-20 lg:w-24"
               alt="Craving Sugar"
             />
-            <p className="mt-[-30px] ml-[20px] md:mt-[-50px] ml-[50px] lg:mt-[-60px] ml-[100px] F-Family">
+            <p className="mt-[-30px]  md:mt-[-50px] ml-[50px] lg:mt-[-60px] F-Family">
               <strong>CRAVING SUGAR</strong> All the time?
             </p>
           </div>
