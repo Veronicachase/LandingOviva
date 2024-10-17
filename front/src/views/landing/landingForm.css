@@ -63,3 +63,32 @@
       background-color: #860349;
     
     }
+
+    @media (max-width: 400px) {
+
+      .formContainer {
+        padding-top:5%;
+        padding-bottom:5%;
+    
+      }
+    
+      .mainTextForm {
+        font-size: 20px !important;
+      }
+    
+    }
+    
+    @media (min-width: 401px) and (max-width: 767px) {
+
+      .formContainer {
+        top: -20px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+      }
+    
+      .mainTextForm {
+        font-size: 29px !important;
+      }
+    
+    }
+    

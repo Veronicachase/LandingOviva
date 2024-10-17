@@ -102,7 +102,7 @@ const LandingForm = () => {
       />
       <img className="logo img-fluid" src={Logo} alt="Logo" />
 
-      <div className=" absolute  px-[7%] py-[10%]  md:py-[5%]  max-w-2xl mx-4 my-4  lg:m-4 align-middle  rounded-[32px] top-[12%] bottom-[12%]flex flex-wrap overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-white/40 to-white/30">
+      <div className=" formContainer absolute  px-[7%]  md:py-[5%]  max-w-2xl mx-4 my-4  lg:m-4 align-middle  rounded-[32px] top-[12%] bottom-[12%]flex flex-wrap overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-white/40 to-white/30">
         <h4 className=" mb-3 lg:mb-5">
           {day} {month} {year} 12 PM - 1 PM CET
         </h4>
@@ -216,7 +216,7 @@ const LandingForm = () => {
               </select>
             </div>
           </div>
-          <h5 className="text-3xl md:text-4xl font-bold text-center tracking-wider mb-2 mt-2 lg:order-first">
+          <h5 className=" mainTextForm md:text-4xl font-bold text-center tracking-wider mb-2 mt-2 lg:order-first">
             Boost Your Mood & Get Back Your Energy
           </h5>
           {/* Botón de enviar */}

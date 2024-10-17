@@ -358,32 +358,32 @@ function LandingPage() {
               <p className=" mb-4 secondaryText text-xl xl:text-2xl  font-semibold">
                 AGNIESZKA FRONIA
               </p>
-              <p className="text-base lg:text-lg 2xl:text-xl mb-2 xl:leading-relaxed F-Family">
+              <p className="text-base lg:text-lg 2xl:text-xl mb-3 xl:leading-relaxed F-Family">
                 Hi, I am Agnieszka and I am a certified women’s health expert
                 with a passion for helping others.
               </p>
-              <p className="text-base lg:text-lg 2xl:text-xl mb-2 xl:leading-relaxed F-Family">
+              <p className="text-base lg:text-lg 2xl:text-xl mb-3 xl:leading-relaxed F-Family">
                 For many years, I struggled with hormonal health issues such as
                 acne, hair loss, weight gain, absence of periods, insomnia, and
                 high levels of stress and anxiety. Feeling confused, tired, and
                 often ignored by many doctors, I decided to take control of my
                 health.
               </p>
-              <p className="text-base lg:text-lg 2xl:text-xl mb-2 xl:leading-relaxed F-Family">
+              <p className="text-base lg:text-lg 2xl:text-xl mb-3 xl:leading-relaxed F-Family">
                 Since 2015, I’ve traveled across South America and India,
                 exploring various methods to resolve my symptoms. Along the way,
                 I became a certified yoga, meditation, and breath-work teacher.
               </p>
-              <p className="text-base lg:text-lg 2xl:text-xl mb-2 xl:leading-relaxed F-Family">
+              <p className="text-base lg:text-lg 2xl:text-xl mb-3 xl:leading-relaxed F-Family">
                 Additionally, I earned an MSc in Psychological Medicine and
                 Mental Health from London Metropolitan University, focusing on
                 hormones, inflammation, and gut health.
               </p>
-              <p className="text-base lg:text-lg 2xl:text-xl mb-2 xl:leading-relaxed F-Family">
+              <p className="text-base lg:text-lg 2xl:text-xl mb-3 xl:leading-relaxed F-Family">
                 My goal is to help you navigate your hormonal, physical,
                 psychological, and emotional health with ease.
               </p>
-              <p className="text-base lg:text-lg  2xl:text-xl mb-2 xl:leading-relaxed F-Family">
+              <p className="text-base lg:text-lg  2xl:text-xl mb-3 xl:leading-relaxed F-Family">
                 Join my upcoming webinar so we can get to know each other better
                 and gain the knowledge you need to take control of your health.
               </p>
@@ -611,14 +611,14 @@ function LandingPage() {
               <img
                 src={orangeBottomLarge}
                 alt="Orange background"
-                className="orangeBottom w-screen max-h-[730px]"
+                className="orangeBottom w-screen "
               />
             </picture>
 
             <div className="absolute inset-y-72 lg:inset-y-40  md:inset-0  flex flex-col  md:flex-row">
               <div className="relative  flex-shrink-0 md:w-1/2 flex items-end justify-center ">
                 <img
-                  className="absolute left-[56px] bottom-[0px] lg:left-[0px] lg:bottom-[-160px] object-cover min-w-[342px] "
+                  className="absolute  w-full min-w-[150%] max-w-[300%] -left-[20px] bottom-[0px]  lg:bottom-[-160px]  object-cover"
                   src={ImageFooterSin}
                   alt="bottom image"
                 />
@@ -633,7 +633,7 @@ function LandingPage() {
                   Boost Your Mood & Get Back Your Energy
                 </h2>
                 <Link to="/landing-form">
-                  <button className="mainButton bottomButton mt-4 md:mt-0">
+                  <button className="mainButton bottomButton mt-4 md:mt-0 md:mb-8">
                     SAVE YOUR SPOT
                   </button>
                 </Link>

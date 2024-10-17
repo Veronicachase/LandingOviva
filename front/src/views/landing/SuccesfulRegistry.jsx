@@ -8,7 +8,7 @@ import './successfulRegistry.css'
 const SuccessfulRegistry = () => {
   
     return (
-      <div className="container-fluid main relative ">
+      <div className="w-full relative relative ">
       <img className="hero img-fluid min-h-screen h-screen" src={headerImage} alt="Hero" />
       <img className="logo img-fluid" src={Logo} alt="Logo" />
       <div className="modal-container  absolute gap-5  px-[7%] p-[7%]  max-w-2xl mx-4 my-4  lg:m4 align-middle  rounded-[32px] top-[12%] bottom-[12%]flex flex-wrap overflow-hidden flex flex-col items-center justify-center bg-gradient-to-b from-white/40 to-white/30"> 
